@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">course-grade-calculator</string>
+    <string name="app_name">Course Grade Calculator</string>
+    <string name="assignmentsTextViewName">Assignments (15%)</string>
+    <string name="participationTextViewName">Participation (15%)</string>
+    <string name="projectTextViewName">Project (20%)</string>
+    <string name="quizzesTextViewName">Quizzes (20%)</string>
+    <string name="examTextViewName">Exam (30%)</string>
+    <string name="setExamMarkTextViewName">Set Exam Mark:</string>
+    <string name="finalMarkTextViewName">Final Mark</string>
+    <string name="resetButtonName">Reset All</string>
 </resources>
