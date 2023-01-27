@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     double examSeekBarValue;
     TextView examSeekBarTextView;
 
+    EditText finalMarkEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         examSeekBar = findViewById(R.id.examSeekBar);
         examSeekBar.setOnSeekBarChangeListener(seekBarChangeListener);
         examSeekBarTextView = findViewById(R.id.examSeekBarTextView);
+
+        finalMarkEditText = findViewById(R.id.finalMarkEditText);
     }
 
     private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
@@ -53,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
             examSeekBarValue = seekBar.getProgress();
             examSeekBarTextView.setText(String.valueOf(examSeekBarValue));
+            updateStandard();
         }
 
         @Override
@@ -109,6 +114,11 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
     @Override
     public void afterTextChanged(Editable editable) {
+        updateStandard();
+    }
 
+    private void updateStandard() {
+        double finalMark = assignmentsGrade * 15 / 100 + participationGrade * 15 / 100 + projectGrade * 20 / 100 + quizzesGrade * 20 / 100 + examSeekBarValue * 30 / 100;
+        finalMarkEditText.setText(String.format("%.02f", finalMark));
     }
 }
