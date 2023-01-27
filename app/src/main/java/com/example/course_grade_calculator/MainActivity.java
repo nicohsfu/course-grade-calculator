@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
     double assignmentsGrade;
 
+    SeekBar examSeekBar;
+    double examSeekBarValue;
+    TextView examSeekBarTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +27,29 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
         assignmentsEditText = findViewById(R.id.assignmentsEditText);
         assignmentsEditText.addTextChangedListener(this);
+
+        examSeekBar = findViewById(R.id.examSeekBar);
+        examSeekBar.setOnSeekBarChangeListener(seekBarChangeListener);
+        examSeekBarTextView = findViewById(R.id.examSeekBarTextView);
     }
+
+    private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+            examSeekBarValue = seekBar.getProgress();
+            examSeekBarTextView.setText(String.valueOf(examSeekBarValue));
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar) {
+
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+
+        }
+    };
 
     @Override
     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
