@@ -117,13 +117,12 @@
                     android:layout_weight="1"
                     android:text="@string/examTextViewName" />
 
-                <EditText
+                <TextView
                     android:id="@+id/examSeekBarTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number" />
+                    android:layout_weight="1" />
+
             </TableRow>
 
             <TableRow
