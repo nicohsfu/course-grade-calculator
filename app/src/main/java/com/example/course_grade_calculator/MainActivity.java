@@ -13,8 +13,14 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements TextWatcher {
 
     EditText assignmentsEditText;
+    EditText participationEditText;
+    EditText projectEditText;
+    EditText quizzesEditText;
 
     double assignmentsGrade;
+    double participationGrade;
+    double projectGrade;
+    double quizzesGrade;
 
     SeekBar examSeekBar;
     double examSeekBarValue;
@@ -27,6 +33,15 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
 
         assignmentsEditText = findViewById(R.id.assignmentsEditText);
         assignmentsEditText.addTextChangedListener(this);
+
+        participationEditText = findViewById(R.id.participationEditText);
+        participationEditText.addTextChangedListener(this);
+
+        projectEditText = findViewById(R.id.projectEditText);
+        projectEditText.addTextChangedListener(this);
+
+        quizzesEditText = findViewById(R.id.quizzesEditText);
+        quizzesEditText.addTextChangedListener(this);
 
         examSeekBar = findViewById(R.id.examSeekBar);
         examSeekBar.setOnSeekBarChangeListener(seekBarChangeListener);
@@ -65,6 +80,30 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                 assignmentsGrade = 0.0;
             }
             Toast.makeText(this, String.valueOf(assignmentsGrade), Toast.LENGTH_LONG).show();
+        }
+        if (participationEditText.isFocused()) {
+            try {
+                participationGrade = Double.parseDouble(participationEditText.getText().toString());
+            } catch (NumberFormatException e) {
+                participationGrade = 0.0;
+            }
+            Toast.makeText(this, String.valueOf(participationGrade), Toast.LENGTH_LONG).show();
+        }
+        if (projectEditText.isFocused()) {
+            try {
+                projectGrade = Double.parseDouble(projectEditText.getText().toString());
+            } catch (NumberFormatException e) {
+                projectGrade = 0.0;
+            }
+            Toast.makeText(this, String.valueOf(projectGrade), Toast.LENGTH_LONG).show();
+        }
+        if (quizzesEditText.isFocused()) {
+            try {
+                quizzesGrade = Double.parseDouble(quizzesEditText.getText().toString());
+            } catch (NumberFormatException e) {
+                quizzesGrade = 0.0;
+            }
+            Toast.makeText(this, String.valueOf(quizzesGrade), Toast.LENGTH_LONG).show();
         }
     }
 
