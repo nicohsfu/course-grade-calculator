@@ -9,4 +9,4 @@ Calculate your total final grade for a course, based on the weight of each of th
 
 ## Demo
 
-*gifs would go here later...*
+![demo of the app](https://github.com/nicohsfu/course-grade-calculator/blob/main/demo/demo-course-grade-calculator.gif?raw=true)
