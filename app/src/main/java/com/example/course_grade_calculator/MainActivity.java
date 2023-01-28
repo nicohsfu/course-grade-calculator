@@ -56,6 +56,39 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, View
 
         resetButton = findViewById(R.id.resetButton);
         resetButton.setOnClickListener(this);
+
+        if (savedInstanceState != null) {
+            if (savedInstanceState.containsKey("ASSIGNMENTS")) {
+                assignmentsGrade = savedInstanceState.getDouble("ASSIGNMENTS");
+                assignmentsEditText.setText(String.valueOf(assignmentsGrade));
+            }
+            if (savedInstanceState.containsKey("EXAMSEEKBARVALUE")) {
+                examSeekBarValue = savedInstanceState.getDouble("EXAMSEEKBARVALUE");
+                examSeekBar.setProgress((int) examSeekBarValue);
+            }
+            if (savedInstanceState.containsKey("PARTICIPATION")) {
+                participationGrade = savedInstanceState.getDouble("PARTICIPATION");
+                participationEditText.setText(String.valueOf(participationGrade));
+            }
+            if (savedInstanceState.containsKey("PROJECT")) {
+                projectGrade = savedInstanceState.getDouble("PROJECT");
+                projectEditText.setText(String.valueOf(projectGrade));
+            }
+            if (savedInstanceState.containsKey("QUIZZES")) {
+                quizzesGrade = savedInstanceState.getDouble("QUIZZES");
+                quizzesEditText.setText(String.valueOf(quizzesGrade));
+            }
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putDouble("ASSIGNMENTS", assignmentsGrade);
+        outState.putDouble("EXAMSEEKBARVALUE", examSeekBarValue);
+        outState.putDouble("PARTICIPATION", participationGrade);
+        outState.putDouble("PROJECT", projectGrade);
+        outState.putDouble("QUIZZES", quizzesGrade);
     }
 
     private SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
