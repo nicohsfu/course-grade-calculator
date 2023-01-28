@@ -27,7 +27,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/assignmentsTextViewName" />
+                    android:text="@string/assignmentsTextViewName"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/assignmentsEditText"
@@ -49,7 +50,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/participationTextViewName" />
+                    android:text="@string/participationTextViewName"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/participationEditText"
@@ -71,7 +73,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/projectTextViewName" />
+                    android:text="@string/projectTextViewName"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/projectEditText"
@@ -93,7 +96,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/quizzesTextViewName" />
+                    android:text="@string/quizzesTextViewName"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/quizzesEditText"
@@ -115,7 +119,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/examTextViewName" />
+                    android:text="@string/examTextViewName"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/examSeekBarTextView"
@@ -136,7 +141,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/setExamMarkTextViewName" />
+                    android:text="@string/setExamMarkTextViewName"
+                    android:textStyle="italic" />
 
                 <SeekBar
                     android:id="@+id/examSeekBar"
@@ -157,7 +163,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/finalMarkTextViewName" />
+                    android:text="@string/finalMarkTextViewName"
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/finalMarkEditText"
