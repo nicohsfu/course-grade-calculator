@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Course Grade Calculator</string>
+    <string name="app_name">Nico\'s Course Grade Calculator</string>
     <string name="assignmentsTextViewName">Assignments (15%)</string>
     <string name="participationTextViewName">Participation (15%)</string>
     <string name="projectTextViewName">Project (20%)</string>
